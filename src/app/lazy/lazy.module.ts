@@ -5,7 +5,7 @@ import { routing } from './lazy.routing';
 import {Lazy2Component} from "./lazy2.component";
 
 @NgModule({
-  imports: [routing],
+  imports: [ routing ],
   declarations: [
     LazyComponent,
     Lazy2Component

@@ -1,0 +1,65 @@
+.chart_container {
+  position: relative;
+  .tooltip_custom {
+    position: absolute;
+    background: khaki;
+    color: #fff;
+    opacity: 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/shell_donut.png') no-repeat;
+    background-position: center 10px;
+    pointer-events: none;
+  }
+  .labels {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    padding-top: 64px;
+    pointer-events: none;
+    p {
+      margin: 0;
+    }
+    .percentage {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 19px;
+      text-transform: uppercase;
+      span {
+        font-size: 12px;
+        transform: translate(0, -14px);
+        display: inline-block;
+      }
+    }
+    //percentage
+    .title {
+      color: #141414;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  &.fat {
+    &:before {
+      left: -1px;
+      background-image: url('../../assets/fat_shell.png');
+    }
+  }
+  //.fat
+  &.full {
+    &:before {
+      left: -1px;
+      background-image: url('../../assets/full_shell.png');
+    }
+  }
+}
+
+// .chart_container

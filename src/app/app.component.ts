@@ -8,10 +8,9 @@ import { select } from 'd3';
 })
 export class AppComponent {
   public title = 'app works!';
-  constructor(
+  constructor (
   ) {
-    select('body')
-      .style('background', 'red');
+
   }
 }
 

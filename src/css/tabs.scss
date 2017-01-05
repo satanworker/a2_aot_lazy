@@ -1,0 +1,36 @@
+@import 'variables';
+
+.tabs_container {
+  display: inline-block;
+  /* Base text style */
+  color: $link_color;
+  .tabs_button {
+    width: 58px;
+    display: block;
+    float: left;
+    background-color: white;
+    border-top: 1px solid $light_blue;
+    border-bottom: 1px solid $light_blue;
+    border-left: 1px solid $light_blue;
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    &:first-of-type {
+      border-radius: 15px 0 0 15px;
+    }
+    &:last-of-type {
+      border-right: 1px solid $light_blue;
+      border-radius: 0 15px 15px 0;
+    }
+    &.active {
+      color: #fff;
+      background: $light_blue;
+      border-color: $light_blue;
+    }
+    &:hover, &:visited {
+      text-decoration: none;
+    }
+  }
+}

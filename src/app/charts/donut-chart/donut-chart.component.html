@@ -1,0 +1,16 @@
+<div class="chart_container {{className}}" #container>
+  <svg #charts></svg>
+  <div class="labels" *ngIf="!className">
+    <template ngFor let-item [ngForOf]="data"  let-_index="index">
+      <template [ngIf]="item.title == 'Current'">
+        <p class="percentage" [style.color]="item.color">
+          {{item.value}}<span>%</span>
+        </p>
+        <p class="title">Current</p>
+      </template>
+    </template>
+  </div>
+  <div class="tooltip_custom" #tooltipElement>
+    {{tooltip.data}}
+  </div>
+</div>

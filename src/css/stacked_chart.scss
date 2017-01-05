@@ -1,0 +1,71 @@
+stacked-chart {
+  .chart_container {
+    width: 650px;
+    height: 311px;
+    position: relative;
+    .shadow {
+      position: absolute;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+  }
+  svg {
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  }
+  .shadow_rect {
+    fill: none;
+    filter: url('#drop-shadow')
+  }
+  .bar_shell {
+    position: absolute;
+  }
+  .y-axis,
+  .x-axis {
+    line {
+      stroke: none;
+    }
+    .domain {
+      display: none;
+    }
+  }
+  .y-axis {
+    text {
+      fill: #125396;
+      // color: #125396;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 48px;
+    }
+  }
+  .x-axis {
+    color: #141414;
+    font-family: "Open Sans";
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  .last .top_circle {
+    fill: #b35048;
+  }
+  .shell_group {
+    position: absolute;
+    bottom: 0;
+  }
+  //.bar shell
+  .bar_shell {
+    border-radius: 9px 9px 0 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 47%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    bottom: 20px;
+  }
+}

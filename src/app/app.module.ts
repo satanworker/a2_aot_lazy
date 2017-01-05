@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {JustComponent} from "./just.component";
-import {routing} from "./app.routing";
-import {GlobalService} from "./global.service";
+import { JustComponent } from './just.component';
+import { routing } from './app.routing';
+import { GlobalService } from './global.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,6 @@ import {GlobalService} from "./global.service";
   providers: [
     GlobalService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
