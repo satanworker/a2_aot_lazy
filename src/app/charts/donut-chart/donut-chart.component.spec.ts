@@ -34,7 +34,6 @@ describe('UiComponentsComponent', () => {
     parentFixture.detectChanges();
     let fixture = TestBed.createComponent(DonutChartComponent);
     let component: DonutChartComponent = fixture.debugElement.componentInstance;
-    console.log(component.data, 'data');
     component.data = [{
       data: 20,
       title: 'no recare'
@@ -47,7 +46,17 @@ describe('UiComponentsComponent', () => {
     let fixture = TestBed.createComponent(DonutChartComponent);
     let component: DonutChartComponent = fixture.debugElement.componentInstance;
     component.prepareElements();
-    console.log(component.container_instance, 'component instance');
+    let keys = Object.keys(component.container_instance);
+    let mockKeys = ['top', 'left', 'element'];
+    expect(keys).toEqual(mockKeys);
   }));
+
+  it('should render chart', async(() => {
+    let fixture = TestBed.createComponent(DonutChartComponent);
+    let component: DonutChartComponent = fixture.debugElement.componentInstance;
+    component.ngOnInit();
+    component.renderChart();
+  }));
+
 });
 
