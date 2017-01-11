@@ -1,0 +1,173 @@
+div.labels {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 50%;
+  line-height: 0;
+  transform: translate(0px, -27px);
+  p {
+    margin: 0;
+    line-height: 12px;
+    &.percentage {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      &:after {
+        content: '%';
+        display: inline-block;
+        font-size: 10px;
+        transform: translate(0, -12px);
+      }
+    }
+    &.ytd_goal {
+      color: #141414;
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &.ytd,
+    &.mtd {
+      color: #141414;
+      font-size: 8px;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: left;
+      vertical-align: top;
+      width: 40px;
+      line-height: 10px;
+      .rectangle {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 4px;
+      }
+    }
+  }
+  //p
+}
+
+//labels
+.blue .labels {
+  .ytd {
+    .rectangle {
+      background: #316899;
+    }
+  }
+  .mtd {
+    .rectangle {
+      background-color: #aecfee;
+    }
+  }
+}
+
+.yellow .labels {
+  .ytd {
+    .rectangle {
+      background: #a4941a;
+    }
+  }
+  .mtd {
+    .rectangle {
+      background-color: #ddcc52;
+    }
+  }
+}
+
+.green .labels {
+  .ytd {
+    .rectangle {
+      background: #1a8a4c;
+    }
+  }
+  .mtd {
+    .rectangle {
+      background-color: #6fdf94;
+    }
+  }
+}
+
+.red .labels {
+  .ytd {
+    .rectangle {
+      background: #9B2A24;
+    }
+  }
+  .mtd {
+    .rectangle {
+      background-color: #F94343;
+    }
+  }
+}
+
+//background-color: #1a8a4c;
+.inner_blob {
+  position: relative;
+  display: block;
+  background-size: 58px;
+  background-position: 85px 28px;
+  background-repeat: no-repeat;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../assets/inner-shell.png) no-repeat;
+    background-size: 57px;
+    // background-position: 85px 28px;
+    background-position: 83px 29px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &:after {
+    content: '';
+    display: block;
+    background: url(../../assets/outer-shell.png) no-repeat;
+    background-size: 149px;
+    background-position: 11px 11px;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  svg {
+    background-size: 149px;
+    background-position: 10px 10px;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+  &.blue {
+    background-image: url(../../assets/inner-fill.png);
+    svg {
+      background-image: url('../../assets/blue-outer.png');
+    }
+  }
+  &.green {
+    background-image: url(../../assets/grn-inner-fill.png);
+    svg {
+      background-image: url('../../assets/grn-outer-fill.png');
+    }
+  }
+  &.yellow {
+    background-image: url(../../assets/yellow-inner-fill.png);
+    svg {
+      background-image: url('../../assets/yellow-outer-fill.png');
+    }
+  }
+  &.red {
+    background-image: url(../../assets/red-inner-fill.png);
+    svg {
+      background-image: url('../../assets/red-outer-fill.png');
+    }
+  }
+}
+
+.gradient {
+  background: linear-gradient(-90deg, rgba(40, 93, 143, 1) 0%, rgba(93, 156, 210, 1) 100%);
+}

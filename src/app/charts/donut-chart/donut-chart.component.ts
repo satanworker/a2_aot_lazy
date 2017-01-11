@@ -94,7 +94,6 @@ export class DonutChartComponent implements OnInit {
       .innerRadius(this.svg_stats.size / 2 - this.svg_stats.margin - 1 - this.svg_stats.arc_height)
       .outerRadius(this.svg_stats.size / 2 - this.svg_stats.margin);
     this.data.map((d, i) => {
-
       d.title = d.data.title;
       if (this.sort) {
         d.color = '#e87e04';

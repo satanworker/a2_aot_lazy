@@ -30,6 +30,7 @@ describe('UiComponentsComponent', () => {
     TestBed.compileComponents();
   });
 
+
   it('should create the ui DonutChartComponent', async(() => {
     parentFixture.detectChanges();
     let fixture = TestBed.createComponent(DonutChartComponent);

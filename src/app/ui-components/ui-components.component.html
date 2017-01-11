@@ -1,2 +1,37 @@
-<p>UI components</p>
-<app-donut-chart [data]="donut_chart"></app-donut-chart>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <app-chart-double [color]="'blue'"></app-chart-double>
+      </div>
+      <div class="col-xs-4">
+        <app-chart-double [color]="'green'"></app-chart-double>
+      </div>
+      <div class="col-xs-4">
+        <app-chart-double [color]="'yellow'"></app-chart-double>
+      </div>
+      <div class="col-xs-4">
+        <app-chart-double [color]="'red'"></app-chart-double>
+      </div>
+      <div class="col-xs-4">
+        <app-donut-chart [data]="donut_chart"></app-donut-chart>
+      </div>
+      <div class="col-xs-4">
+        <app-donut-chart [data]="fat_donut_chart" [className]="'fat'" [sort]="false"></app-donut-chart>
+      </div>
+      <div class="col-xs-4">
+        <app-donut-chart [data]="fat_donut_chart" [className]="'full'" [sort]="false"></app-donut-chart>
+      </div>
+      <div class="col-xs-12">
+        <app-stacked-chart
+          [data]="stacked_data"
+        ></app-stacked-chart>
+      </div>
+      <div class="col-xs-12">
+        <app-bar-chart
+          [data]="bar_data"
+        ></app-bar-chart>
+      </div>
+    </div>
+  </div>
+</div>
