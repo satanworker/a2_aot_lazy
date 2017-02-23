@@ -1,9 +1,9 @@
+import { AppTestComponent } from './test/test.component';
 import {Routes, RouterModule} from "@angular/router";
 import {ModuleWithProviders} from "@angular/core";
-import {JustComponent} from "./just.component";
 const routes: Routes = [
   { path: '', redirectTo: 'eager', pathMatch: 'full' },
-  { path: 'eager', component: JustComponent },
+  { path: 'eager', component: AppTestComponent },
   { path: 'lazy', loadChildren: 'app/lazy/lazy.module#LazyModule' }
 ];
 
