@@ -1,26 +1,27 @@
+import { store, effects, instrumentation } from './../store/index';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {JustComponent} from "./just.component";
-import {routing} from "./app.routing";
-import {GlobalService} from "./global.service";
+import { routing } from "./app.routing";
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    JustComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    store,
+    effects,
+    instrumentation
   ],
   providers: [
-    GlobalService
   ],
   bootstrap: [AppComponent]
 })

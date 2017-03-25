@@ -1,10 +1,8 @@
 import {Routes, RouterModule} from "@angular/router";
 import {ModuleWithProviders} from "@angular/core";
-import {JustComponent} from "./just.component";
 const routes: Routes = [
-  { path: '', redirectTo: 'eager', pathMatch: 'full' },
-  { path: 'eager', component: JustComponent },
-  { path: 'lazy', loadChildren: 'app/lazy/lazy.module#LazyModule' }
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: 'main', loadChildren: 'app/main/main.module#MainModule' }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: true });

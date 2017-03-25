@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { select } from 'd3';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +9,6 @@ export class AppComponent {
   public title = 'app works!';
   constructor(
   ) {
-    select('body')
-      .style('background', 'red');
   }
 }
 
